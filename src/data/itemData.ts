@@ -50,7 +50,9 @@ export const getUniqueLocations = (): string[] => {
 
 // Get unique units
 export const getUniqueUnits = (): string[] => {
-  return [...new Set(itemData.map(item => item.unit))].sort();
+  return [...new Set(itemData.map(item => item.unit))]
+    .filter(unit => unit.trim() !== "")  // remove empty string units
+    .sort();
 };
 
 // Filter items by location and unit
