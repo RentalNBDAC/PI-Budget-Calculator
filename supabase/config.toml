@@ -1,0 +1,4 @@
+project_id = "nieujbualdatqgrzexkk"
+
+[functions.pi-chat]
+verify_jwt = false
